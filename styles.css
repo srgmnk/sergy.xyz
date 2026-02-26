@@ -1,0 +1,176 @@
+:root {
+  --bg: #f6f6f3;
+  --text: #1b1b1a;
+  --muted: #808077;
+  --line: #d8d8cf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+.page {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 148px 24px 64px;
+}
+
+.intro {
+  margin-bottom: 54px;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 13px;
+  color: #222220;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.quote p {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #252523;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 44px;
+  font-size: 12px;
+}
+
+.links a,
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.links a:hover,
+.footer a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.links a:focus-visible,
+.footer a:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.placeholder {
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 38px;
+  margin-bottom: 46px;
+}
+
+.clients h2 {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.clients ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clients li {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footer {
+  padding-top: 8px;
+}
+
+.footer p {
+  font-size: 13px;
+}
+
+.footer .email {
+  font-weight: 600;
+}
+
+.copyright {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  color: #96968e;
+  letter-spacing: 0.01em;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 760px) {
+  .page {
+    padding-top: 88px;
+  }
+
+  .quotes {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .clients {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
