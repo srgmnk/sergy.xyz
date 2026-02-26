@@ -1,8 +1,10 @@
 :root {
   --bg: #f6f6f3;
-  --text: #1b1b1a;
-  --muted: #808077;
-  --line: #d8d8cf;
+  --text: #1d1d1b;
+  --title: #151513;
+  --muted: #7f7f76;
+  --line: #ddddd5;
+  --footer: #9a9a92;
 }
 
 * {
@@ -20,18 +22,27 @@ body {
   background: var(--bg);
   color: var(--text);
   font-size: 13px;
-  line-height: 1.5;
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 
 .page {
-  max-width: 840px;
+  width: 100%;
+  max-width: 640px;
   margin: 0 auto;
-  padding: 148px 24px 64px;
+  padding: 0 24px;
 }
 
 .intro {
-  margin-bottom: 54px;
+  margin-bottom: 56px;
 }
 
 h1,
@@ -42,36 +53,75 @@ ul {
 }
 
 h1 {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.01em;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .intro p {
-  font-size: 13px;
   color: #222220;
 }
 
 .quotes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 24px;
-  margin-bottom: 34px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 48px;
+  align-items: start;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-bottom: 36px;
+  padding-left: max(24px, calc((100vw - 640px) / 2 + 24px));
+  padding-right: max(24px, calc((100vw - 640px) / 2 + 24px));
+  padding-bottom: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.quotes::-webkit-scrollbar {
+  display: none;
+}
+
+.quote {
+  flex: 0 0 280px;
+  width: 280px;
+  margin: 0;
 }
 
 .quote p {
-  font-size: 12px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.6;
   color: #252523;
+  margin: 0;
+}
+
+.quote *:first-child {
+  margin-top: 0;
+}
+
+.quote *:last-child {
+  margin-bottom: 0;
+}
+
+.quote[lang="yi"],
+.quote[lang="ar"] {
+  unicode-bidi: plaintext;
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px 16px;
-  margin-bottom: 44px;
-  font-size: 12px;
+  gap: 7px 15px;
+  margin-bottom: 48px;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
 }
 
 .links a,
@@ -86,6 +136,11 @@ h1 {
   text-decoration-thickness: 2px;
 }
 
+.links a {
+  display: inline-flex;
+  align-items: baseline;
+}
+
 .links a:focus-visible,
 .footer a:focus-visible {
   outline: 2px solid var(--text);
@@ -97,22 +152,32 @@ h1 {
   color: var(--muted);
 }
 
+.muted s {
+  text-decoration-thickness: 0.06em;
+}
+
 .placeholder {
   color: var(--muted);
   letter-spacing: 0.08em;
 }
 
+.meta {
+  opacity: 0.5;
+}
+
 .clients {
+  width: min(710px, calc(100vw - 48px));
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 26px 38px;
-  margin-bottom: 46px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-bottom: 48px;
 }
 
 .clients h2 {
-  font-size: 12px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  color: var(--title);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .clients ul {
@@ -121,30 +186,34 @@ h1 {
 }
 
 .clients li {
-  margin-bottom: 4px;
-  font-size: 12px;
+  margin-bottom: 7px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .footer {
-  padding-top: 8px;
+  border-top: 0;
+  padding-top: 14px;
 }
 
 .footer p {
   font-size: 13px;
+  color: var(--footer);
 }
 
 .footer .email {
-  font-weight: 600;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .copyright {
-  margin-top: 16px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-  font-size: 10px;
-  color: #96968e;
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 13px;
+  color: var(--footer);
   letter-spacing: 0.01em;
+  text-align: left;
 }
 
 .sr-only {
@@ -161,15 +230,12 @@ h1 {
 
 @media (max-width: 760px) {
   .page {
-    padding-top: 88px;
-  }
-
-  .quotes {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    max-width: 100%;
+    padding: 0 24px;
   }
 
   .clients {
+    width: 100%;
     grid-template-columns: 1fr;
     gap: 24px;
   }
