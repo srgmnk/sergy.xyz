@@ -39,10 +39,15 @@ body {
   max-width: 640px;
   margin: 0 auto;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .intro {
-  margin-bottom: 56px;
+  margin: 0;
+  font-size: calc(13px * 1.3);
+  line-height: 1.3;
 }
 
 h1,
@@ -53,13 +58,14 @@ ul {
 }
 
 h1 {
-  font-size: 13px;
+  font-size: 1em;
   font-weight: 700;
   letter-spacing: 0.01em;
-  margin-bottom: 11px;
+  margin-bottom: 0;
 }
 
 .intro p {
+  font-size: 1em;
   color: #222220;
 }
 
@@ -76,7 +82,7 @@ h1 {
   margin-right: -50vw;
   overflow-x: auto;
   overflow-y: hidden;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   padding-left: max(24px, calc((100vw - 640px) / 2 + 24px));
   padding-right: max(24px, calc((100vw - 640px) / 2 + 24px));
   padding-bottom: 6px;
@@ -92,6 +98,16 @@ h1 {
   flex: 0 0 280px;
   width: 280px;
   margin: 0;
+}
+
+.quote[lang="fr"] {
+  flex: 0 0 310px;
+  width: 310px;
+}
+
+.quote--ru {
+  flex: 0 0 340px;
+  width: 340px;
 }
 
 .quote p {
@@ -115,13 +131,14 @@ h1 {
 }
 
 .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px 15px;
-  margin-bottom: 48px;
+  margin: 0;
   font-size: 13px;
   letter-spacing: 0.01em;
   line-height: 1.4;
+}
+
+.links p {
+  margin: 0;
 }
 
 .links a,
@@ -137,8 +154,7 @@ h1 {
 }
 
 .links a {
-  display: inline-flex;
-  align-items: baseline;
+  display: inline;
 }
 
 .links a:focus-visible,
@@ -165,12 +181,24 @@ h1 {
   opacity: 0.5;
 }
 
+.ext {
+  font-family: "Times New Roman", Times, serif;
+  opacity: 0.5;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+a + .ext {
+  text-decoration: none;
+}
+
 .clients {
   width: min(710px, calc(100vw - 48px));
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  margin-bottom: 48px;
+  margin: 0;
 }
 
 .clients h2 {
@@ -193,7 +221,7 @@ h1 {
 
 .footer {
   border-top: 0;
-  padding-top: 14px;
+  padding-top: 0;
 }
 
 .footer p {
