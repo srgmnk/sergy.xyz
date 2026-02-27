@@ -268,3 +268,22 @@ a + .ext {
     gap: 24px;
   }
 }
+
+@media (max-width: 768px) {
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .links p {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .links .link-line {
+    display: block;
+  }
+}
