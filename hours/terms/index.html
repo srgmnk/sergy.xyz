@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Hours – Terms of Use</title>
-<link rel="stylesheet" href="/hours/legal.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Hours — Terms of Use</title>
+  <link rel="stylesheet" href="/hours/legal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body data-theme="light">
-  
   <main class="legal-page">
     <div class="legal-container">
-      <h1>Terms</h1>
-      <p class="effective-date"><strong>Effective date:</strong> 2026</p>
+      <h1>Terms of Use</h1>
+      <p class="effective-date"><strong>Effective date:</strong> March 2026</p>
 
       <section>
-        <h2>Introduction</h2>
+        <h2>Acceptance of Terms</h2>
         <p>...</p>
       </section>
 
       <section>
-        <h2>Information We Collect</h2>
+        <h2>Use of the App</h2>
         <p>...</p>
+      </section>
+
+      <section>
+        <h2>Disclaimer</h2>
+        <p>...</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>If you have questions, contact us at <a href="mailto:hi@sergy.xyz">hi@sergy.xyz</a>.</p>
       </section>
     </div>
   </main>
 
   <script>
-  const params = new URLSearchParams(window.location.search);
-  const theme = params.get("theme");
-  if (theme === "dark" || theme === "light") {
-    document.body.setAttribute("data-theme", theme);
-  }
+    const params = new URLSearchParams(window.location.search);
+    const theme = params.get("theme");
+    if (theme === "dark" || theme === "light") {
+      document.body.setAttribute("data-theme", theme);
+    }
   </script>
-  
 </body>
 </html>
