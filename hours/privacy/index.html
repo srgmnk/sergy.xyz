@@ -6,14 +6,6 @@
 <link rel="stylesheet" href="/hours/legal.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const theme = params.get("theme");
-  if (theme === "dark" || theme === "light") {
-    document.body.setAttribute("data-theme", theme);
-  }
-</script>
   
 <body data-theme="light">
   <main class="legal-page">
@@ -33,4 +25,13 @@
     </div>
   </main>
 </body>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const theme = params.get("theme");
+  if (theme === "dark" || theme === "light") {
+    document.body.setAttribute("data-theme", theme);
+  }
+</script>
+  
 </html>
