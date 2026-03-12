@@ -7,23 +7,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const theme = params.get("theme");
+  if (theme === "dark" || theme === "light") {
+    document.body.setAttribute("data-theme", theme);
+  }
+</script>
 
-<main class="container">
+<body data-theme="light">
+  <main class="legal-page">
+    <div class="legal-container">
+      <h1>Terms</h1>
+      <p class="effective-date"><strong>Effective date:</strong> 2026</p>
 
-<h1>Terms of Use</h1>
+      <section>
+        <h2>Introduction</h2>
+        <p>...</p>
+      </section>
 
-<p><strong>Effective date:</strong> 2026</p>
-
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-</p>
-
-<p>
-By using this application you agree to the following terms.
-</p>
-
-</main>
-
+      <section>
+        <h2>Information We Collect</h2>
+        <p>...</p>
+      </section>
+    </div>
+  </main>
 </body>
 </html>
