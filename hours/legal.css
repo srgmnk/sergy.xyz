@@ -115,12 +115,10 @@ hr {
 
 @media (max-width: 640px) {
   .legal-page {
-    padding: 16px 12px 32px;
+    padding: 16px 16px 32px;
   }
 
   .legal-container {
-    border-radius: 20px;
-    padding: 22px 18px 26px;
   }
 
   h1 {
