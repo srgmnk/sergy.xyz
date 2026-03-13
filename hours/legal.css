@@ -67,7 +67,7 @@ h2 {
   margin: 0 0 12px;
   font-size: 18px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 540;
   letter-spacing: -0.02em;
   color: var(--text);
 }
@@ -75,7 +75,7 @@ h2 {
 p, li {
   margin: 0 0 14px;
   font-size: 16px;
-  line-height: 1.68;
+  line-height: 1.4;
   color: var(--text);
 }
 
@@ -103,19 +103,18 @@ strong {
 
 hr {
   border: 0;
-  border-top: 1px solid var(--border);
   margin: 28px 0;
 }
 
 .meta-note {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--text-secondary);
 }
 
 @media (max-width: 640px) {
   .legal-page {
-    padding: 16px 16px 32px;
+    padding: 16px 20px 32px;
   }
 
   .legal-container {
@@ -131,6 +130,6 @@ hr {
 
   p, li {
     font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.4;
   }
 }
