@@ -11,24 +11,185 @@
     <div class="legal-container">
 
       <section>
-        <h2>Introduction</h2>
-        <p>Lorem Ipsum and some more rules are describes here for some legal resons hop hey lala ley some text in one p format.</p>
+        <h2>1. Overview</h2>
+        <p>Hours is an iOS application that allows users to create a list of cities and view their time zones side by side.</p>
+        <p>The App’s core features include:</p>
+        <ul>  
+          <li>adding cities from a bundled city database;</li>
+          <li>searching for cities using Apple MapKit when a city is not found locally;</li>
+          <li>optionally detecting the user’s current city through location services;</li>
+          <li>renaming saved cities with custom labels;</li>
+          <li>reordering or deleting saved cities;</li>
+          <li>switching between 12-hour and 24-hour time formats;</li>
+          <li>switching between system, light, and dark appearance modes;</li>
+          <li>adjusting time offsets using a rotary dial interface; and opening the Privacy Policy and Terms of Use within the App.</li>
+        </ul>
+        <p>The App does not require internet access for its core time zone conversion functionality.</p>
       </section>
 
       <section>
-        <h2>Information We Collect</h2>
-        <p>...</p>
+        <h2>2. Information the App Processes</h2>
+        <p>The App does not create user accounts and does not collect personal profiles. However, the App processes certain categories of information in order to function.</p>
+        <p><b>a. Saved City Data</b></p>
+        <p>The App stores the following information locally on your device for the cities you save:</p>
+        <ul>
+          <li>city identifier;</li>
+          <li>city name;</li>
+          <li>time zone identifier;</li>
+          <li>optional custom city display name; and order of saved cities.</li>
+        </ul>
+        <p><b>b. User Interface Preferences</b></p>
+        <p>The App stores your selected interface preferences locally on your device, including:</p>
+        <ul>  
+          <li>time format preference (system / 12-hour / 24-hour); and</li>
+          <li>appearance preference (system / light / dark).</li>
+        </ul>
+        <p><b>c. Search Queries</b>b</p>
+        <p>If you search for a city that is not found in the App’s bundled local city database, the text you enter may be sent to Apple MapKit services in order to return search results.</p>
+        <p><b>d. Location Information</b></p>
+        <p>If you choose to grant location access, the App may request your device’s current location in order to determine the nearest city and its time zone. Location access is optional, and the App works without it.</p>
+        <p><b>e. Support Email Information</b></p>
+        <p>If you choose to use the “Contact Me” option, the App prepares a draft email in your mail client. That draft may include certain technical metadata, such as:</p>
+	      <ul>
+          <li>app version and build;</li>
+          <li>iOS version;</li>
+          <li>device model;</li>
+          <li>device name;</li>
+          <li>device hardware identifier;</li>
+          <li>locale;</li>
+          <li>system time zone;</li>
+          <li>time format preference; and</li>
+          <li>appearance preference.</li>
+        </ul>
+        <p>This information is included only in the draft email and is transmitted only if you choose to send that email.</p>
       </section>
 
-      <section>
-        <h2>How We Use Information</h2>
-        <p>...</p>
-      </section>
+3. How Information Is Stored
 
-      <section>
-        <h2>Contact</h2>
-        <p>If you have questions, contact us at <a href="mailto:hi@sergy.xyz">hi@sergy.xyz</a>.</p>
-      </section>
+All user data handled by the App is stored locally on the user’s device.
+
+The App uses the following storage mechanisms:
+
+a. UserDefaults
+
+The App uses UserDefaults to store:
+	•	time format preference; and
+	•	appearance preference.
+
+b. Local JSON File Storage
+
+The App stores saved city data as a local JSON file within the App’s Application Support directory on the device.
+
+The App does not use:
+	•	iCloud;
+	•	CloudKit;
+	•	external servers;
+	•	user accounts; or
+	•	remote databases.
+
+4. How Information Is Shared
+
+The App does not sell, rent, or otherwise share user data with third parties for marketing or commercial profiling purposes.
+
+However, certain information may be transmitted in the following limited cases:
+
+a. Apple MapKit Services
+
+When you use MapKit-powered search or location-based features, the following may be transmitted to Apple:
+	•	search queries entered by you; and
+	•	current device location, only if you have granted location permission.
+
+These services are provided by Apple and are subject to Apple’s own privacy practices.
+
+b. Legal Page Display
+
+When you open the Privacy Policy or Terms of Use inside the App, the App loads those pages from:
+
+https://sergy.xyz
+
+In connection with that request, only the visual theme preference (light or dark) is included as a query parameter so the page can be displayed appropriately.
+
+c. User-Initiated Support Email
+
+If you choose to send the prepared support email, the contents of that email, including any included technical metadata, will be transmitted through your selected mail client and email service provider.
+
+5. Third-Party and System Services
+
+The App does not use third-party analytics, advertising, tracking, or crash-reporting SDKs.
+
+The App relies only on Apple system frameworks, including:
+	•	SwiftUI;
+	•	UIKit;
+	•	MapKit;
+	•	Core Location;
+	•	WebKit; and
+	•	MessageUI.
+
+6. Location Permission
+
+The App may request When In Use location permission in order to help identify your current city when adding cities to your list.
+
+Location access is optional. You can use the App without granting location permission.
+
+Location data used for this feature is processed through Apple services and is not permanently stored by the App.
+
+7. Advertising and Tracking
+
+Hours:
+	•	does not display advertisements;
+	•	does not use advertising SDKs;
+	•	does not use analytics tracking; and
+	•	does not track users across apps or websites.
+
+Because the App does not track users across apps or websites, it does not engage in cross-app tracking for advertising purposes.
+
+8. Children’s Privacy
+
+The App is intended for a general audience and does not knowingly collect personal data from children.
+
+If you believe that personal information from a child has been provided through the App in a way not described here, please contact the developer using the contact details below.
+
+9. Data Security
+
+All stored user data remains on your device.
+
+The developer does not operate servers that store user data for the App.
+
+While no method of electronic storage or transmission is completely immune from risk, the App is designed to minimize data collection and to store user information locally whenever possible.
+
+10. Your Choices and Data Deletion
+
+Because the App stores data locally on your device, you control most stored information directly through the App and your device.
+
+You can delete stored data by:
+	•	removing cities from the list;
+	•	resetting or changing app preferences; or
+	•	uninstalling the App.
+
+Uninstalling the App removes locally stored app data from the device, subject to the normal behavior of the iOS operating system.
+
+11. International Availability
+
+The App may be made available in multiple countries and regions through the Apple App Store.
+
+Regardless of where the App is made available, the developer is located in Thailand, and information handling described in this Privacy Policy is based on the App’s design as described here.
+
+12. Changes to This Privacy Policy
+
+The developer may update this Privacy Policy from time to time.
+
+Any updated version will be posted at:
+
+https://sergy.xyz/hours/privacy/
+
+The “Effective date” at the top of this Privacy Policy indicates when the current version takes effect.
+
+13. Contact Information
+
+If you have any questions about this Privacy Policy, please contact:
+
+Sergey Minkin
+hi@sergy.xyz
     </div>
   </main>
 
