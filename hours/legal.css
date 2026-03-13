@@ -44,7 +44,6 @@ body {
 }
 
 .disclamer {
-  margin: 0px 0px 16px;
   padding: 20px 20px 6px;
   border: 1px solid var(--border);
   border-radius: 24px;
@@ -72,7 +71,7 @@ section {
 }
 
 h2 {
-  margin: 20px 0 12px;
+  margin: 40px 0 12px;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 540;
