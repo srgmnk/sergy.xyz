@@ -30,6 +30,10 @@
 			  <li>adding cities from a built-in database;</li>
 			  <li>searching for cities using Apple MapKit services;</li>
 			  <li>optionally using the device’s location to suggest the current city;</li>
+			  <li>displaying weather information for selected cities;</li>
+			  <li>creating calendar events in Apple Calendar by explicit user action;</li>
+			  <li>creating reminders in Apple Reminders by explicit user action;</li>
+			  <li>scheduling local notifications on the device;</li>
 			  <li>renaming, reordering, and deleting cities;</li>
 			  <li>switching time format (12-hour / 24-hour); and</li>
 			  <li>switching appearance mode (system / light / dark).</li>
@@ -88,10 +92,13 @@
 		  <ul>
 			  <li>Apple MapKit search; and</li>
 			  <li>Apple reverse geocoding.</li>
+			  <li>Apple Calendar integration via EventKit; and</li>
+			  <li>Apple Reminders integration via EventKit.</li>
 		  </ul>
+		<p>The App may also obtain weather data from Apple WeatherKit or another weather data provider.</p>
 		<p>The App also loads its legal pages from:<br><a href="https://sergy.xyz">https://sergy.xyz</a></p>
-		  <p>Use of Apple services and related data may be subject to Apple’s own terms, conditions, and privacy policies.</p>
-		  <p>The Developer is not responsible for the availability, accuracy, content, performance, or policies of Apple services or any other external services that may be used indirectly in connection with the App.</p>
+		<p>Use of Apple services and related data may be subject to Apple’s own terms, conditions, and privacy policies. Use of any third-party weather provider, if applicable, may also be subject to that provider’s own terms and privacy practices.</p>
+		<p>The Developer is not responsible for the availability, accuracy, content, performance, or policies of Apple services or any other external services that may be used indirectly in connection with the App.</p>
       </section>
 
       <section>
@@ -116,7 +123,9 @@
 			  <li>the App will operate uninterrupted, securely, or error-free;</li>
 			  <li>the App will always be available;</li>
 			  <li>the App will be compatible with all devices, operating systems, or configurations;</li>
-			  <li>the information provided through the App will be accurate, complete, or reliable; or</li>
+			  <li>time calculations, time zone information, weather information, and other information provided through the App will be accurate, complete, reliable, or up to date;</li>
+			  <li>weather data will be available, accurate, or delivered without delay;</li>
+			  <li>local notifications will be delivered at a particular time or at all; or</li>
 			  <li>any external services used by the App will remain available.</li>
 		  </ul>
       </section>
@@ -126,8 +135,10 @@
         <p>To the maximum extent permitted by law, the Developer shall not be liable for any indirect, incidental, consequential, special, exemplary, or punitive damages, or for any loss of profits, revenue, business, goodwill, data, or other intangible losses, arising out of or related to:</p>
 		  <ul>
 			  <li>your use of or inability to use the App;</li>
-			  <li>your reliance on time zone information displayed by the App;</li>
-			  <li>errors, omissions, delays, or inaccuracies in time zone or location-related information;</li>
+			  <li>your reliance on time zone information, weather information, or other information displayed by the App;</li>
+			  <li>errors, omissions, delays, or inaccuracies in time zone, weather, or location-related information;</li>
+			  <li>missed meetings, missed reminders, missed events, or scheduling errors;</li>
+			  <li>delayed, failed, or missing local notifications;</li>
 			  <li>interruption, suspension, or discontinuation of the App; or</li>
 			  <li>the unavailability or failure of Apple services or other external services.</li>
 		  </ul>
