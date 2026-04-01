@@ -125,10 +125,12 @@
 			<li>current device location, only if you have granted location permission.</li>
 		</ul>
 		<p>These services are provided by Apple and are subject to Apple’s own privacy practices.</p>
-		<p><b>b. Legal Page Display</b></p>
+		<p><b>b. Weather Data Services</b></p>
+		<p>When you use weather features, the App may request weather data for selected cities from Apple WeatherKit or another weather data provider. The App does not store such weather data on the Developer’s own servers.</p>
+		<p><b>c. Legal Page Display</b></p>
 		<p>When you open the Privacy Policy or Terms of Use inside the App, the App loads those pages from: <a href="https://sergy.xyz">https://sergy.xyz</a></p>
 		<p>In connection with that request, only the visual theme preference (light or dark) is included as a query parameter so the page can be displayed appropriately.</p>
-		<p><b>c. User-Initiated Support Email</b></p>
+		<p><b>d. User-Initiated Support Email</b></p>
 		<p>If you choose to send the prepared support email, the contents of that email, including any included technical metadata, will be transmitted through your selected mail client and email service provider.</p>
 	</section>
 
@@ -141,16 +143,25 @@
 			<li>UIKit;</li>
 			<li>MapKit;</li>
 			<li>Core Location;</li>
+			<li>EventKit;</li>
+			<li>UserNotifications;</li>
 			<li>WebKit; and</li>
 			<li>MessageUI.</li>
 		</ul>
+		<p>The App may also obtain weather data through Apple WeatherKit or another weather data provider. If a third-party weather provider is used, that provider’s handling of data is subject to its own terms and privacy practices.</p>
 	</section>
 
 	<section>
 		<h2>6. Location Permission</h2>
-		<p>The App may request When In Use location permission in order to help identify your current city when adding cities to your list.</p>
-		<p>Location access is optional. You can use the App without granting location permission.</p>
-		<p>Location data used for this feature is processed through Apple services and is not permanently stored by the App.</p>
+		<p>The App may request the following permissions, each of which is optional and used only for the related feature:</p>
+		<ul>
+			<li>Location (When In Use): to help identify your current city and related features.</li>
+			<li>Calendar: to create calendar events by your explicit action.</li>
+			<li>Reminders: to create reminders by your explicit action.</li>
+			<li>Notifications: to schedule local notifications on your device.</li>
+		</ul>
+		<p>You can use the App without granting these permissions, except to the extent a specific optional feature requires the relevant permission.</p>
+		<p>Location data used for these features is processed through Apple services and is not permanently stored by the App. Calendar and reminder data accessed for creation flows stays on your device and is not collected, stored, or transmitted by the Developer’s own servers. Notifications created by the App are local only.</p>
 	</section>
 
 	<section>
