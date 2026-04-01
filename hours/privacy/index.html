@@ -24,8 +24,8 @@
 		</section>
 
 		<section>
-			<p style="font-size: 14px;">We do not collect, store, or share any personal data from users. All data (such as selected cities and time zones) is stored locally on the device.</p>
-			<p style="font-size: 14px;">If location access is granted, the app uses it only locally on the device to suggest the current city. Location data is not collected, stored, or transmitted to any server.</p>
+			<p style="font-size: 14px;">We do not collect, store, or share personal data on our own servers. All app data (such as selected cities, time zones, interface preferences, locally scheduled notifications, and any calendar or reminder items created by explicit user action) is stored or handled locally on the device or within Apple system apps and frameworks.</p>
+			<p style="font-size: 14px;">If location access is granted, the App uses it only to suggest the current city and related features. Location data is not collected or stored on our own servers.</p>
 		</section>
 	</div>
 
@@ -34,16 +34,21 @@
         <p>Hours is an iOS application that allows users to create a list of cities and view their time zones side by side.</p>
         <p>The App’s core features include:</p>
         <ul>  
-          <li>adding cities from a bundled city database;</li>
-          <li>searching for cities using Apple MapKit when a city is not found locally;</li>
-          <li>optionally detecting the user’s current city through location services;</li>
-          <li>renaming saved cities with custom labels;</li>
-          <li>reordering or deleting saved cities;</li>
-          <li>switching between 12-hour and 24-hour time formats;</li>
-          <li>switching between system, light, and dark appearance modes;</li>
-          <li>adjusting time offsets using a rotary dial interface; and opening the Privacy Policy and Terms of Use within the App.</li>
+          	<li>adding cities from a bundled city database;</li>
+          	<li>searching for cities using Apple MapKit when a city is not found locally;</li>
+          	<li>optionally detecting the user’s current city through location services;</li>
+          	<li>displaying weather information for selected cities;</li>
+          	<li>creating calendar events by explicit user action;</li>
+          	<li>creating reminders by explicit user action;</li>
+          	<li>scheduling local notifications on the device;</li>
+          	<li>renaming saved cities with custom labels;</li>
+          	<li>reordering or deleting saved cities;</li>
+          	<li>switching between 12-hour and 24-hour time formats;</li>
+          	<li>switching between system, light, and dark appearance modes;</li>
+          	<li>adjusting time offsets using a rotary dial interface; and</li>
+          	<li>opening the Privacy Policy and Terms of Use within the App.</li>
         </ul>
-        <p>The App does not require internet access for its core time zone conversion functionality.</p>
+        <p>The App does not require internet access for its core time zone conversion functionality, although some optional features may rely on Apple or other weather data services.</p>
 	</section>
 
 	<section>
@@ -67,7 +72,11 @@
         <p>If you search for a city that is not found in the App’s bundled local city database, the text you enter may be sent to Apple MapKit services in order to return search results.</p>
         <p><b>d. Location Information</b></p>
         <p>If you choose to grant location access, the App may request your device’s current location in order to determine the nearest city and its time zone. Location access is optional, and the App works without it.</p>
-        <p><b>e. Support Email Information</b></p>
+		<p><b>e. Weather Data</b></p>
+        <p>The App may retrieve current weather information for selected cities using Apple WeatherKit or another weather data provider. Weather data is displayed within the App and is not stored on the Developer’s own servers.</p>
+		<p><b>f. Calendar, Reminders, and Notifications</b></p>
+        <p>If you choose to use calendar, reminders, or notification features, the App may access the relevant Apple frameworks in order to create calendar events, create reminders, or schedule local notifications on your device. The App does not collect, store, or transmit your calendar data or reminder data to the Developer’s own servers. Notifications created by the App are local only.</p>
+        <p><b>g. Support Email Information</b></p>
         <p>If you choose to use the “Contact Me” option, the App prepares a draft email in your mail client. That draft may include certain technical metadata, such as:</p>
 	      <ul>
           <li>app version and build;</li>
