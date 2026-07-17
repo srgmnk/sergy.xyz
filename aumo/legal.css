@@ -1,0 +1,180 @@
+:root {
+  --bg: rgb(238, 238, 238);
+  --card: rgb(255, 255, 255);
+  --text: rgb(0, 0, 0);
+  --text-secondary: rgba(0, 0, 0, 0.40);
+  --text-subdued: rgba(0, 0, 0, 0.15);
+  --border: rgb(238, 238, 238);
+  --accent: #FF4000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: rgb(24, 24, 24);
+    --card: rgb(32, 32, 32);
+    --text: rgb(255, 255, 255);
+    --text-secondary: rgba(255, 255, 255, 0.40);
+    --text-subdued: rgba(255, 255, 255, 0.20);
+    --border: rgb(28, 28, 28);
+    --accent: #FF4000;
+  }
+}
+
+body[data-theme="light"] {
+  --bg: rgb(238, 238, 238);
+  --card: rgb(255, 255, 255);
+  --text: rgb(0, 0, 0);
+  --text-secondary: rgba(0, 0, 0, 0.40);
+  --text-subdued: rgba(0, 0, 0, 0.15);
+  --border: rgb(238, 238, 238);
+  --accent: #FF4000;
+}
+
+body[data-theme="dark"] {
+  --bg: rgb(24, 24, 24);
+  --card: rgb(32, 32, 32);
+  --text: rgb(255, 255, 255);
+  --text-secondary: rgba(255, 255, 255, 0.40);
+  --text-subdued: rgba(255, 255, 255, 0.20);
+  --border: rgb(28, 28, 28);
+  --accent: #FF4000;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.legal-page {
+  padding: 0px 4px 48px;
+}
+
+.legal-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.disclamer {
+  padding: 20px 20px 6px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.effective-date {
+  margin: 32px 0 0;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+section {
+  margin: 0 0 8px;
+}
+
+h2 {
+  margin: 32px 0 12px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 540;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+h3 {
+  margin: 20px 0 8px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text);
+}
+
+p {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+li {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+ul, ol {
+  margin: 0 0 16px 1.2em;
+  padding: 0;
+}
+
+li::marker {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: 600;
+}
+
+hr {
+  border: 0;
+  margin: 28px 0;
+}
+
+.meta-note {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .legal-page {
+    padding: 16px 20px 32px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p, li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  b {
+    font-weight: 520;
+  }
+}

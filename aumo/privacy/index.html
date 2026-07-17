@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aumo — Privacy Policy</title>
+  <meta name="description" content="Learn how Aumo handles information when you use the iOS translation app.">
+  <link rel="stylesheet" href="../legal.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <main class="legal-page">
+    <div class="legal-container">
+      <div class="disclamer">
+        <section>
+          <p class="meta-note">Aumo</p>
+          <p class="meta-note">Effective date: July 17, 2026</p>
+          <p class="meta-note">This Privacy Policy explains how Aumo (“Aumo,” the “App”) handles information when you use the App.</p>
+          <p class="meta-note">The App is developed and provided by:</p>
+          <p class="meta-note">Sergey Minkin, Thailand<br>Email: <a href="mailto:hi@sergy.xyz">hi@sergy.xyz</a></p>
+          <p class="meta-note">By using the App, you acknowledge that information will be handled as described in this Privacy Policy.</p>
+          <p class="meta-note">Aumo does not require an account and does not use advertising or cross-app tracking. However, unlike a fully offline utility, Aumo must transmit speech, typed text, and related settings to backend and translation service providers in order to provide translations.</p>
+        </section>
+      </div>
+      <section>
+        <h2>1. Overview</h2>
+        <p>Aumo is an iOS translation application for short, natural conversations.</p>
+        <p>The App allows users to:</p>
+        <ul>
+  <li>translate recorded speech;</li>
+  <li>translate typed text;</li>
+  <li>translate between Thai, Russian, Spanish, and English;</li>
+  <li>configure translation direction, voice, tone, and certain regional settings;</li>
+  <li>request a new translation of the same source text;</li>
+  <li>store successful translations locally in History;</li>
+  <li>copy translated text;</li>
+  <li>submit optional categorical feedback about translations;</li>
+  <li>switch between system, light, and dark appearance modes; and</li>
+  <li>open the Privacy Policy and Terms of Use inside the App.</li>
+</ul>
+        <p>Most translation features require internet access.</p>
+      </section>
+      <section>
+        <h2>2. Information the App Processes</h2>
+        <p>The App does not create user accounts or personal profiles. It processes the following categories of information in order to function.</p>
+        <h3>a. Recorded Audio</h3>
+        <p>If you use voice translation, the App records audio after you grant microphone permission.</p>
+        <p>The audio is temporarily stored on your device and transmitted to Aumo’s backend for transcription and translation.</p>
+        <p>Audio is not saved in local History. The App normally removes temporary audio after cancellation, successful translation, unusable input, or completion of a retry flow. Temporary files may remain temporarily in the normal circumstances of an app crash, operating-system termination, or system-managed temporary storage.</p>
+        <p>The Aumo backend does not save raw audio in its database, Redis, or file storage. It forwards audio to OpenAI for transcription and may send it again if a transcription retry is required.</p>
+        <h3>b. Typed Text</h3>
+        <p>If you use typed translation, the text you submit is transmitted to Aumo’s backend for translation.</p>
+        <p>The text-entry field is not stored as a permanent draft. After a successful translation, cleaned source text and translated text may be saved locally in History.</p>
+        <h3>c. Transcription, Cleaned Source Text, and Translation</h3>
+        <p>The backend may create or return:</p>
+        <ul>
+  <li>speech transcription;</li>
+  <li>cleaned or normalized source text;</li>
+  <li>detected language;</li>
+  <li>translated text; and</li>
+  <li>validation or style results.</li>
+</ul>
+        <p>This information is displayed in the App. Successful source/translation pairs are stored locally in History until deleted.</p>
+        <p>Ordinary successful translations are not written to Aumo’s feedback database merely because they were translated.</p>
+        <h3>d. Language and Style Settings</h3>
+        <p>The App processes and may transmit settings needed to produce a translation, including:</p>
+        <ul>
+  <li>source and target language;</li>
+  <li>Their Voice and My Voice direction;</li>
+  <li>Speak as;</li>
+  <li>Tone;</li>
+  <li>Thai voice style; and</li>
+  <li>Spanish region.</li>
+</ul>
+        <p>These preferences are stored locally and may be included in translation requests.</p>
+        <h3>e. Translation History</h3>
+        <p>For each successful translation, the App may store locally:</p>
+        <ul>
+  <li>a History entry identifier;</li>
+  <li>date and time;</li>
+  <li>cleaned source text;</li>
+  <li>translated text;</li>
+  <li>source and target language;</li>
+  <li>style settings;</li>
+  <li>speaker side; and</li>
+  <li>input mode.</li>
+</ul>
+        <p>History remains on your device until you delete an item, clear History, reset app data, or uninstall the App, subject to normal iOS behavior.</p>
+        <h3>f. Translation Feedback</h3>
+        <p>If you choose a feedback reason for an active translation, the App may send:</p>
+        <ul>
+  <li>the selected feedback reason;</li>
+  <li>a translation identifier;</li>
+  <li>an encrypted feedback receipt;</li>
+  <li>an idempotency identifier;</li>
+  <li>an optional random anonymous tester identifier;</li>
+  <li>app version; and</li>
+  <li>app build.</li>
+</ul>
+        <p>The feedback request itself does not directly send raw audio or client-supplied source and translated text. Instead, the backend validates the encrypted receipt and derives the relevant translation snapshot from it.</p>
+        <p>When feedback is successfully accepted, Aumo may store:</p>
+        <ul>
+  <li>original source text or transcription;</li>
+  <li>cleaned source text;</li>
+  <li>translated text;</li>
+  <li>input type;</li>
+  <li>source and target language;</li>
+  <li>voice, tone, style, and regional settings;</li>
+  <li>model, prompt, style-guide, backend, app, and schema version information;</li>
+  <li>the feedback reason;</li>
+  <li>an optional anonymous tester identifier;</li>
+  <li>a hashed App Attest-derived app-instance identifier;</li>
+  <li>timestamps; and</li>
+  <li>export status.</li>
+</ul>
+        <p>The App currently provides categorical feedback only. It does not provide a free-text feedback field or suggested-translation field.</p>
+        <p>Feedback is confirmed optimistically in the interface. A visual confirmation may appear before the backend request has completed and does not guarantee delivery.</p>
+        <h3>g. Anonymous Tester Identifier</h3>
+        <p>When feedback is submitted, the App may generate a random UUID and store it in the iOS Keychain. This identifier is used to associate feedback from the same installation or device context.</p>
+        <p>It is not an Apple ID, advertising identifier, email address, account ID, device name, or contact identifier.</p>
+        <p>The App does not currently provide a control to view, reset, or delete this identifier.</p>
+        <h3>h. Security and App Attest Information</h3>
+        <p>Aumo uses Apple App Attest and DeviceCheck to help verify legitimate app instances, protect the backend, prevent abuse, and enforce rate limits.</p>
+        <p>Depending on the flow, the App and backend may process:</p>
+        <ul>
+  <li>App Attest key identifiers;</li>
+  <li>attestation objects;</li>
+  <li>assertions;</li>
+  <li>challenge identifiers;</li>
+  <li>client-data hashes;</li>
+  <li>an Aumo-generated app-instance identifier;</li>
+  <li>public-key and sign-counter records;</li>
+  <li>verification environment and timestamps; and</li>
+  <li>hashed identifiers used for rate limiting or feedback storage.</li>
+</ul>
+        <p>Raw App Attest values are not included in ordinary translation content or feedback exports.</p>
+        <h3>i. Rate-Limit and Network Metadata</h3>
+        <p>The backend uses counters and pseudonymous identifiers to enforce per-minute and daily request limits.</p>
+        <p>For verified traffic, rate-limit keys use a hash of the Aumo app-instance identifier. In certain development or fallback configurations, hashes of a bearer token and network IP information may be used.</p>
+        <p>Rate-limit counters expire after their fixed minute or UTC-day window. The App may receive limit, scope, wait time, and reset time when a request is blocked.</p>
+        <h3>j. App and Interface Preferences</h3>
+        <p>The App stores interface preferences locally, including:</p>
+        <ul>
+  <li>selected languages;</li>
+  <li>voice, tone, and region preferences;</li>
+  <li>appearance preference; and</li>
+  <li>certain App Attest registration state.</li>
+</ul>
+        <h3>k. Device Motion</h3>
+        <p>The About screen may read device pitch and roll through CoreMotion to create a local parallax effect.</p>
+        <p>Motion values are used only to move artwork on screen. They are not stored, transmitted, logged, or used to infer location, health, or activity.</p>
+        <h3>l. Clipboard</h3>
+        <p>When you use Copy, translated text is written to the iOS system clipboard.</p>
+        <p>Clipboard retention and access are controlled by iOS. Aumo does not control whether another app reads clipboard content after you copy it.</p>
+      </section>
+      <section>
+        <h2>3. How Information Is Stored</h2>
+        <p>Aumo uses the following storage mechanisms.</p>
+        <h3>a. UserDefaults</h3>
+        <p>The App uses UserDefaults to store:</p>
+        <ul>
+  <li>translation History;</li>
+  <li>language and style preferences;</li>
+  <li>appearance preference;</li>
+  <li>App Attest key identifier; and</li>
+  <li>App Attest registration-complete state.</li>
+</ul>
+        <h3>b. Keychain</h3>
+        <p>The App uses the iOS Keychain to store the optional random anonymous tester identifier used for feedback.</p>
+        <h3>c. Temporary Files and Memory</h3>
+        <p>The App uses temporary local files for recorded audio and memory-only state for active results, feedback receipts, retry contexts, idempotency keys, typed editor text, and motion offsets.</p>
+        <h3>d. Redis</h3>
+        <p>The backend uses Redis-compatible infrastructure to store:</p>
+        <ul>
+  <li>short-lived App Attest challenges;</li>
+  <li>App Attest app-instance, key, public-key, sign-counter, and security records; and</li>
+  <li>short-lived rate-limit counters.</li>
+</ul>
+        <p>Challenges normally expire after approximately five minutes or are consumed after use. Rate-limit counters expire after the applicable fixed window plus a small buffer.</p>
+        <p>App Attest app-instance and key records do not currently have an automatic expiry in the backend implementation.</p>
+        <h3>e. Neon PostgreSQL</h3>
+        <p>Aumo uses Neon PostgreSQL to store submitted translation-feedback reports.</p>
+        <p>Ordinary translations that are not reported are not stored in this database.</p>
+        <p>Submitted feedback rows are not currently deleted automatically by the backend.</p>
+        <h3>f. Local Operator Exports</h3>
+        <p>Authorized operator tools may export new feedback reports to CSV and JSONL files for manual review.</p>
+        <p>Exports may contain source text, cleaned source text, translated text, language/style information, model and version metadata, anonymous tester identifier, app version/build, and feedback reason.</p>
+        <p>Exports exclude raw audio, raw App Attest identifiers, App Attest assertions, bearer tokens, IP addresses, database credentials, idempotency keys, request fingerprints, and receipt data.</p>
+        <p>The current code does not define an automatic retention or deletion schedule for exported files.</p>
+      </section>
+      <section>
+        <h2>4. How Information Is Used</h2>
+        <p>Aumo uses information to:</p>
+        <ul>
+  <li>provide speech transcription and translation;</li>
+  <li>apply requested language, tone, voice, and regional settings;</li>
+  <li>validate translation language and style;</li>
+  <li>display and save local History;</li>
+  <li>provide Reload/retranslation;</li>
+  <li>secure the service using App Attest;</li>
+  <li>prevent abuse and enforce rate limits;</li>
+  <li>accept and deduplicate translation feedback;</li>
+  <li>identify recurring translation-quality problems;</li>
+  <li>improve prompts, style guides, validation rules, and product quality;</li>
+  <li>troubleshoot technical failures using non-content operational metadata; and</li>
+  <li>comply with legal obligations and protect the rights, security, and integrity of the App and its users.</li>
+</ul>
+        <p>Aumo does not use user content for advertising or commercial profiling.</p>
+        <p>Any use of submitted feedback for model training or broader research must be separately approved and reflected in an updated policy before such use begins.</p>
+      </section>
+      <section>
+        <h2>5. How Information Is Shared</h2>
+        <p>Aumo does not sell or rent personal information and does not share user content for targeted advertising.</p>
+        <p>Information may be transmitted to the following service providers when necessary to operate the App.</p>
+        <h3>a. Vercel</h3>
+        <p>Aumo’s backend is hosted using Vercel. Translation, security, and feedback requests pass through Vercel-hosted functions.</p>
+        <h3>b. OpenAI</h3>
+        <p>Aumo uses OpenAI services for speech transcription, language detection, translation, cleanup, and validation.</p>
+        <p>Depending on the request, OpenAI may receive:</p>
+        <ul>
+  <li>recorded audio;</li>
+  <li>typed or cleaned source text;</li>
+  <li>transcription text;</li>
+  <li>language pair;</li>
+  <li>voice, tone, style, and regional settings;</li>
+  <li>application prompts; and</li>
+  <li>structured output instructions.</li>
+</ul>
+        <p>Aumo does not intentionally send the anonymous tester identifier, feedback reason, App Attest assertions, or database credentials to OpenAI.</p>
+        <h3>c. Redis-Compatible Infrastructure</h3>
+        <p>Redis-compatible infrastructure is used for short-lived challenges, rate-limit counters, and persistent App Attest security state.</p>
+        <h3>d. Neon</h3>
+        <p>Neon PostgreSQL is used to store submitted translation-feedback reports.</p>
+        <h3>e. Apple System Services</h3>
+        <p>The App uses Apple frameworks and services including:</p>
+        <ul>
+  <li>microphone and AVFoundation;</li>
+  <li>App Attest and DeviceCheck;</li>
+  <li>Keychain;</li>
+  <li>CoreMotion;</li>
+  <li>UIKit and SwiftUI;</li>
+  <li>haptics; and</li>
+  <li>the system clipboard.</li>
+</ul>
+        <p>Apple’s handling of information is governed by Apple’s own terms and privacy practices.</p>
+        <h3>f. Legal Page Display</h3>
+        <p>When you open the Privacy Policy or Terms of Use inside the App, the App loads those pages from:</p>
+        <p><a href="https://sergy.xyz">https://sergy.xyz</a></p>
+        <p>Read the <a href="https://sergy.xyz/aumo/terms/">Aumo Terms of Use</a>.</p>
+        <p>The page may receive a visual-theme value, such as light or dark, so it can be displayed appropriately.</p>
+        <p>A standard web request may also expose ordinary connection metadata, such as IP address, user agent, request time, and requested URL, to the hosting infrastructure, even though the App does not intentionally add translation content or personal profile information to the legal-page request.</p>
+        <h3>g. User-Initiated Contact</h3>
+        <p>If you contact the Developer by email or another service, the content and metadata you choose to send are transmitted through your selected provider and are subject to that provider’s terms and privacy practices.</p>
+      </section>
+      <section>
+        <h2>6. Permissions</h2>
+        <h3>a. Microphone Permission</h3>
+        <p>Aumo requests microphone access only when you attempt to use voice translation and permission has not previously been decided.</p>
+        <p>Microphone access is optional. You may use typed translation without granting microphone permission.</p>
+        <p>You can grant or revoke microphone access in iOS Settings.</p>
+        <h3>b. Motion and Accessibility Settings</h3>
+        <p>The About parallax effect uses device motion only while the artwork is visible.</p>
+        <p>If Reduce Motion is enabled, the parallax effect is disabled.</p>
+        <p>No additional motion-permission prompt is required.</p>
+      </section>
+      <section>
+        <h2>7. Third-Party and System Services</h2>
+        <p>Aumo does not use third-party advertising, marketing analytics, behavioral tracking, or cross-app tracking SDKs.</p>
+        <p>The App and backend rely on:</p>
+        <ul>
+  <li>Apple system frameworks and App Attest;</li>
+  <li>Vercel;</li>
+  <li>OpenAI;</li>
+  <li>Redis-compatible infrastructure;</li>
+  <li>Neon PostgreSQL; and</li>
+  <li>GitHub Pages or equivalent hosting for legal pages on <code>sergy.xyz</code>.</li>
+</ul>
+        <p>The availability, retention, security, subprocessors, and regional processing of those services may be governed by their own terms, privacy policies, account settings, and data-processing agreements.</p>
+      </section>
+      <section>
+        <h2>8. Advertising and Tracking</h2>
+        <p>Aumo:</p>
+        <ul>
+  <li>does not display third-party advertisements;</li>
+  <li>does not use advertising SDKs;</li>
+  <li>does not use the advertising identifier;</li>
+  <li>does not use analytics SDKs for behavioral profiling;</li>
+  <li>does not track users across apps or websites; and</li>
+  <li>does not sell user data.</li>
+</ul>
+        <p>Security identifiers, anonymous tester identifiers, rate-limit identifiers, and operational metadata are used to operate, secure, and improve Aumo, not for advertising.</p>
+      </section>
+      <section>
+        <h2>9. Data Retention</h2>
+        <p>Current retention behavior is as follows.</p>
+        <ul>
+  <li><strong>Temporary audio on device:</strong> normally removed after cancellation, success, unusable input, or completion of retry handling; abnormal termination and OS temporary-storage behavior may affect timing.</li>
+  <li><strong>Ordinary translation data on Aumo backend:</strong> processed transiently and not stored in the feedback database unless feedback is submitted.</li>
+  <li><strong>Local History:</strong> retained until deleted by the user, cleared, reset, or removed with the App, subject to normal iOS behavior.</li>
+  <li><strong>Feedback receipt:</strong> valid for approximately 24 hours and held by the client; it is not stored in a server-side receipt database.</li>
+  <li><strong>App Attest challenges:</strong> normally retained for up to approximately five minutes and consumed after successful use.</li>
+  <li><strong>Rate-limit counters:</strong> retained through the applicable minute or UTC-day window plus a small buffer.</li>
+  <li><strong>App Attest app-instance and key records:</strong> currently have no automatic expiry in the backend implementation.</li>
+  <li><strong>Submitted feedback reports:</strong> currently remain in Neon until manually deleted or a future retention process is introduced.</li>
+  <li><strong>Exported feedback files:</strong> currently have no automatic deletion schedule.</li>
+  <li><strong>Application and provider logs:</strong> retention is controlled by the relevant hosting or service provider and current account settings.</li>
+</ul>
+        <p>We may introduce or change retention periods as the App develops. Material changes will be reflected in an updated Privacy Policy.</p>
+      </section>
+      <section>
+        <h2>10. Data Security</h2>
+        <p>Aumo uses technical and organizational measures intended to protect information, including:</p>
+        <ul>
+  <li>HTTPS-based service endpoints;</li>
+  <li>App Attest verification;</li>
+  <li>one-time security challenges;</li>
+  <li>signature and sign-counter validation;</li>
+  <li>hashed identifiers for rate limiting and feedback storage;</li>
+  <li>environment-variable secret management;</li>
+  <li>encrypted and authenticated feedback receipts using AES-256-GCM;</li>
+  <li>parameterized database queries;</li>
+  <li>idempotency and duplicate-report protection;</li>
+  <li>restricted operator-only feedback export tools;</li>
+  <li>no public database or export endpoint; and</li>
+  <li>content-minimized application logging.</li>
+</ul>
+        <p>No method of transmission, processing, or storage is completely secure. The Developer cannot guarantee absolute security.</p>
+      </section>
+      <section>
+        <h2>11. Your Choices and Data Deletion</h2>
+        <p>You can:</p>
+        <ul>
+  <li>deny or revoke microphone access in iOS Settings;</li>
+  <li>use typed translation instead of voice translation;</li>
+  <li>delete individual History items;</li>
+  <li>clear all History;</li>
+  <li>change language, voice, tone, region, and appearance preferences;</li>
+  <li>choose whether to submit translation feedback;</li>
+  <li>close legal pages without taking further action;</li>
+  <li>use Reduce Motion to disable the About parallax effect; and</li>
+  <li>uninstall the App to remove app-container data, subject to normal iOS and Keychain behavior.</li>
+</ul>
+        <p>Important limitations:</p>
+        <ul>
+  <li>the App does not currently provide an automated way to view, edit, withdraw, or delete submitted feedback;</li>
+  <li>the App does not provide an in-app control to reset App Attest state or the anonymous tester identifier;</li>
+  <li>deleting local History does not delete feedback that was previously submitted to the backend;</li>
+  <li>uninstalling the App may not remove every Keychain item or server-side security/feedback record; and</li>
+  <li>Aumo has no user account that can automatically identify every server-side record as belonging to a particular person.</li>
+</ul>
+        <p>You may contact the Developer at <a href="mailto:hi@sergy.xyz">hi@sergy.xyz</a> with a privacy or deletion request. Because Aumo does not use accounts and stores primarily pseudonymous records, it may not always be possible to identify or verify which server-side records relate to a particular requester.</p>
+      </section>
+      <section>
+        <h2>12. Children’s Privacy</h2>
+        <p>Aumo is intended for a general audience and is not designed to knowingly collect personal information from children.</p>
+        <p>Users should not submit sensitive personal information about themselves or another person through translation or feedback.</p>
+        <p>If you believe that a child has submitted personal information through Aumo in a way that requires review or deletion, contact the Developer using the details below.</p>
+      </section>
+      <section>
+        <h2>13. International Processing and Availability</h2>
+        <p>Aumo may be made available in multiple countries and regions through the Apple App Store.</p>
+        <p>The Developer is located in Thailand. The backend is configured to run in a United States Vercel region, and information may be processed in other countries where Apple, Vercel, OpenAI, Redis, Neon, and their subprocessors operate.</p>
+        <p>Those countries may have data-protection laws that differ from the laws in your location.</p>
+      </section>
+      <section>
+        <h2>14. Changes to This Privacy Policy</h2>
+        <p>The Developer may update this Privacy Policy from time to time to reflect changes in the App, providers, processing, retention, security, or legal requirements.</p>
+        <p>Any updated version will be published at:</p>
+        <p><a href="https://sergy.xyz/aumo/privacy/">https://sergy.xyz/aumo/privacy/</a></p>
+        <p>The “Effective date” at the top of this Privacy Policy indicates when the current version takes effect.</p>
+      </section>
+      <section>
+        <h2>15. Contact Information</h2>
+        <p>If you have any questions, requests, or concerns about this Privacy Policy, please contact:</p>
+        <p>Sergey Minkin<br>
+Thailand<br>
+<a href="mailto:hi@sergy.xyz">hi@sergy.xyz</a></p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const theme = new URLSearchParams(window.location.search).get("theme");
+    if (theme === "dark" || theme === "light") {
+      document.body.setAttribute("data-theme", theme);
+    }
+  </script>
+</body>
+</html>
