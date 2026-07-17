@@ -4,7 +4,7 @@
   --text: rgb(0, 0, 0);
   --text-secondary: rgba(0, 0, 0, 0.40);
   --text-subdued: rgba(0, 0, 0, 0.15);
-  --border: rgb(238, 238, 238);
+  --border: rgba(0, 0, 0, 0.10);
   --accent: #FF4000;
 }
 
@@ -26,7 +26,7 @@ body[data-theme="light"] {
   --text: rgb(0, 0, 0);
   --text-secondary: rgba(0, 0, 0, 0.40);
   --text-subdued: rgba(0, 0, 0, 0.15);
-  --border: rgb(238, 238, 238);
+  --border: rgba(0, 0, 0, 0.10);
   --accent: #FF4000;
 }
 
@@ -36,7 +36,7 @@ body[data-theme="dark"] {
   --text: rgb(255, 255, 255);
   --text-secondary: rgba(255, 255, 255, 0.40);
   --text-subdued: rgba(255, 255, 255, 0.20);
-  --border: rgb(28, 28, 28);
+  --border: rgba(255, 255, 255, 0.16);
   --accent: #FF4000;
 }
 
